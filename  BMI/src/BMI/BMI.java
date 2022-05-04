@@ -18,7 +18,16 @@ package bmi;
  *
  * @author antalferencgeza
  */
+
 import java.util.Scanner;
+
+
+class OutOfRangeException extends RuntimeException {
+
+  OutOfRangeException(String s) {
+    super(s);
+  }
+}
 public class BMI {
    
     public static void main(String[] args) {
@@ -29,17 +38,81 @@ public class BMI {
       System.out.println("Kérem adja meg az életkorát:");
       int age = calc.nextInt();
       
+//      static int beolvasAge(int tola, int iga) {
+//    int age=0;
+//    boolean ok=false;
+//    while(!ok) {
+//      try {
+//        age=Integer.parseInt(extra.Console.readLine("Kor [18; 100]: "));
+//        if(age<tola || age>iga)
+//          throw new OutOfRangeException("Hiba: "+tola+"-tol "+iga+"-ig!");
+//        ok=true;
+//      }
+//      catch (NumberFormatException e) {
+//        System.out.println("Illegalis karakter!");
+//      }
+//      catch (OutOfRangeException e) {
+//        System.out.println(e.getMessage());
+//      }
+//    }
+//    return age;
+//  };
+//      
       System.out.println("Kérem adja meg a magasságát(cm):");
       double height = calc.nextDouble()/100;
+      
+// static int beolvasHeight(int tolh, int igh) {
+//    int height=0;
+//    boolean ok=false;
+//    while(!ok) {
+//      try {
+//        height=Integer.parseInt(extra.Console.readLine("Magasság [150; 280]: "));
+//        if(height<tolh || height>igh)
+//          throw new OutOfRangeException("Hiba: "+tolh+"-tol "+igh+"-ig!");
+//        ok=true;
+//      }
+//      catch (NumberFormatException e) {
+//        System.out.println("Illegalis karakter!");
+//      }
+//      catch (OutOfRangeException e) {
+//        System.out.println(e.getMessage());
+//      }
+//    }
+//    return height/100;
+//  };
      
       System.out.println("Kérem adja meg a testtömegét(kg):");
       double weight = calc.nextDouble();
               
-     double bmi = (weight / (height*height));
-      
+// static int beolvasSúly(int tolw, int igw) {
+//    int weight=0;
+//    boolean ok=false;
+//    while(!ok) {
+//      try {
+//        weight=Integer.parseInt(extra.Console.readLine("Súly [50; 450]: "));
+//        if(weight<tolw || weight>igw)
+//          throw new OutOfRangeException("Hiba: "+tolw+"-tol "+igw+"-ig!");
+//        ok=true;
+//      }
+//      catch (NumberFormatException e) {
+//        System.out.println("Illegalis karakter!");
+//      }
+//      catch (OutOfRangeException e) {
+//        System.out.println(e.getMessage());
+//      }
+//    }
+//    return weight;
+//  };   
+   double bmi = (weight / (height*height));
      System.out.println("AZ ön életkora: " + age + " Az ön BMI indexe: " +bmi);
-    
-    
+ 
+//  public static void main(String[] args) {
+//      Scanner calc = new Scanner(System.in);
+////      System.out.println("Kérem adja meg a nemét(f/n):");
+//        char sex = extra.Console.readChar("Kérem adja meg a nemét(f/n):"); 
+//   
+//    
+  
         
     if (sex =='f'){                                                     //nem figyelembevétel
         if (19 < age && age < 24){                             //életkor figyelembevétel
