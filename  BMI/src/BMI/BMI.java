@@ -35,7 +35,7 @@ public class BMI {
 //      System.out.println("Kérem adja meg a nemét(f/n):");
         char sex = extra.Console.readChar("Kérem adja meg a nemét(f/n):");
       
-      System.out.println("Kérem adja meg az életkorát:");
+      System.out.print("Kérem adja meg az életkorát:");
       int age = calc.nextInt();
       
 //      static int beolvasAge(int tola, int iga) {
@@ -58,7 +58,7 @@ public class BMI {
 //    return age;
 //  };
 //      
-      System.out.println("Kérem adja meg a magasságát(cm):");
+      System.out.print("Kérem adja meg a magasságát(cm):");
       double height = calc.nextDouble()/100;
       
 // static int beolvasHeight(int tolh, int igh) {
@@ -81,7 +81,7 @@ public class BMI {
 //    return height/100;
 //  };
      
-      System.out.println("Kérem adja meg a testtömegét(kg):");
+      System.out.print("Kérem adja meg a testtömegét(kg):");
       double weight = calc.nextDouble();
               
 // static int beolvasSúly(int tolw, int igw) {
@@ -104,7 +104,7 @@ public class BMI {
 //    return weight;
 //  };   
    double bmi = (weight / (height*height));
-     System.out.println("AZ ön életkora: " + age + " Az ön BMI indexe: " +bmi);
+     System.out.print("AZ ön életkora: " + age + " Az ön BMI indexe: " +bmi);
  
 //  public static void main(String[] args) {
 //      Scanner calc = new Scanner(System.in);
